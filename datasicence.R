@@ -13,3 +13,16 @@ pedidos_unicos <- length(unique(df$Invoice))
 ejercicio<-df %>%
   group_by(Invoice)%>%
   summarise(precio_medio=mean(Price))
+
+#11
+ejercicio2 <- df %>%
+  group_by(Invoice)%>%
+  summarise(cantidad=n())
+df2
+
+
+# 13
+ejercicio3<-df %>%
+  group_by(Invoice)%>%
+  summarise(precio_total=sum(Price))
+df3
